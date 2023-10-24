@@ -1,0 +1,42 @@
+.Profile-header {
+    background-color: #282c34;
+    min-height: 100vh;
+    min-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 1vmin);
+    color: white;
+}
+
+/* Profile.css */
+
+.profile-container {
+    max-width: 400px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+p.username {
+    font-weight: bold;
+}
+
+/* Style the "Followers" and "Following" text differently */
+p.followers,
+p.following {
+    color: #00acee; /* Twitter blue color for the follower and following counts */
+}

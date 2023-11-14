@@ -9,7 +9,14 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 5px 5px;
+    padding: 3px 5px;
+    list-style-type: none;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.navbar li {
+    float: left;
 }
 
 .icon-container {
@@ -29,4 +36,9 @@
 
 .icon-container:hover {
     background-color: #007bb5; /* Darker blue on hover */
+}
+
+/* Keep the Logout element fixed at the bottom */
+.navbar li:last-child {
+    margin-top: auto;
 }

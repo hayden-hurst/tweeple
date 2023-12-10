@@ -54,9 +54,7 @@ button {
   cursor: pointer;
 }
 
-button:hover {
-  background-color: #007bb5; /* Darker blue on hover */
-}
+
 
 .post {
   margin: 20px 0;

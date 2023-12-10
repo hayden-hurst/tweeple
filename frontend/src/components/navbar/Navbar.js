@@ -1,4 +1,5 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
+import TweetPopup from '../tweet/Tweet';
 import { useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../context/AuthContext';
 import home from '../../assets/images/home.svg';
@@ -20,6 +21,14 @@ function Navbar() {
 
         // Redirect to the login page
         navigate('/login');
+    };
+
+    // State to control the visibility of the tweet popup
+    const [showTweetPopup, setShowTweetPopup] = useState(false);
+
+    // Function to toggle the tweet popup visibility
+    const toggleTweetPopup = () => {
+        setShowTweetPopup(!showTweetPopup);
     };
 
     return (
@@ -46,7 +55,7 @@ function Navbar() {
                     </div>
                 </li>
                 <li>
-                    <div className="icon-container" onClick={() => navigate('/tweet')}>
+                    <div className="icon-container" onClick={() => toggleTweetPopup()}>
                         <img src={tweet} alt="Tweet" style={{ width: '40px', height: '40px' }}/>
                     </div>
                 </li>
@@ -57,6 +66,8 @@ function Navbar() {
                 </li>
 
             </ul>
+
+            {showTweetPopup && <TweetPopup onClose={toggleTweetPopup} />}
         </nav>
     );
 }
